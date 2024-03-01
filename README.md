@@ -5,6 +5,7 @@ gönderilen test verilerinin kafka consumer olan spark tarafından streaming şe
 Daha sonra lojistik regresyon sınıflandırma algoritmasıyla modelin eğitilmesi ve spark
 streaming ile alınan akış halindeki verinin test verisi olarak kullanılarak model testinin
 yapılması işlemleri gerçekleştirildi.
+
 Kullanılan Teknolojiler
 1. Spark: Apache Spark, büyük veri analizi ve işleme için açık kaynaklı bir platformdur.
 Hızlı, dağıtık ve genel amaçlı bir veri işleme motorudur. Paralel hesaplama yapabilme
