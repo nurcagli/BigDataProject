@@ -1,4 +1,5 @@
 Proje Özeti
+
  Kafka producer ve kafka consumer yapılarının oluşturulması ve kafka producera satır satır
 gönderilen test verilerinin kafka consumer olan spark tarafından streaming şekilde alınması.
 Daha sonra lojistik regresyon sınıflandırma algoritmasıyla modelin eğitilmesi ve spark
