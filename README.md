@@ -1,10 +1,19 @@
 ### Proje Özeti
 
- Kafka producer ve kafka consumer yapılarının oluşturulması ve kafka producera satır satır
-gönderilen test verilerinin kafka consumer olan spark tarafından streaming şekilde alınması.
-Daha sonra lojistik regresyon sınıflandırma algoritmasıyla modelin eğitilmesi ve spark
-streaming ile alınan akış halindeki verinin test verisi olarak kullanılarak model testinin
-yapılması işlemleri gerçekleştirildi.
+Kafka Producer ve Kafka Consumer Oluşturma:
+İlk adım, Kafka üzerinde bir topic oluşturmak ve bir Kafka producer ve consumer oluşturmaktır. Kafka producer, test verilerini Kafka topic'ine gönderecek olan yapıdır. Kafka consumer ise Spark Streaming tarafından verilerin alınacağı yapıdır.
+
+Test Verilerinin Kafka Producer'a Gönderilmesi:
+Test verileri, Kafka producer üzerinden satır satır Kafka topic'ine gönderilir. Bu veriler, genellikle bir formatta (JSON, CSV vb.) olabilir ve Kafka'ya gönderildikten sonra Kafka cluster'ında saklanır.
+
+Spark Streaming ile Verilerin Alınması:
+Spark Streaming, Kafka topic'inden gelen verileri okuyarak bir akış oluşturur. Bu akış, belirli aralıklarla yeni verileri işler. Spark, Kafka topic'inden gelen verileri almak için Kafka connector'larını kullanır.
+
+Lojistik Regresyon Sınıflandırma Modelinin Eğitimi:
+Spark, aldığı akış halindeki verileri işleyerek bir makine öğrenimi modeli olan lojistik regresyon sınıflandırma modelini eğitir. Bu model, verileri önceden tanımlanmış sınıflara göre sınıflandırmak için kullanılabilir.
+
+Modelin Test Edilmesi:
+Eğitilen model, Spark Streaming tarafından alınan akış halindeki verileri kullanarak test edilir. Model, yeni gelen verileri sınıflandırır ve tahminler yapar. Bu tahminler, gerçek sınıflandırmalarla karşılaştırılarak modelin doğruluğu değerlendirilir.
 
 ### Kullanılan Teknolojiler
 ##### 1. Spark:
